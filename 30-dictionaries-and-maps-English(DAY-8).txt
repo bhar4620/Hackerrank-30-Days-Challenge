@@ -1,0 +1,33 @@
+//Complete this code or write your own from scratch
+import java.util.*;
+import java.io.*;
+
+class Solution{
+     
+    public static void main(String[] args) {
+        long m,i,lo2;
+        Scanner sc = new Scanner(System.in);
+        Map<String,Long> phoneBook = new HashMap<String,Long>();
+         
+        m = sc.nextInt();
+        String so;
+        
+        if(1<=m && m<=100000){
+            for(i=0;i<m;i++){
+                so= sc.next();
+                lo2 = sc.nextLong();
+                sc.nextLine();
+                phoneBook.put(so, lo2);
+            }
+            while(sc.hasNext()){
+                String str = sc.next();
+                if(phoneBook.get(str)==null){
+                    System.out.println("Not found");
+                }else{
+                    System.out.println(str+"="+phoneBook.get(str));
+                }
+            }
+             
+        }
+    }
+}
